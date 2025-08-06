@@ -23,3 +23,10 @@ type UserSegmentAssignment struct {
 	// был ли пользователь добавлен "руками" или при случайной выборке (Полезно может быть для условной категории Стримеров/VIP и тд)
 	AssignedAt time.Time `db:"assigned_at" json:"assigned_at"`
 }
+
+// MassAssignResult результат массового назначения сегмента
+type MassAssignResult struct {
+	TotalUsers int `json:"totalUsers"`
+	Assigned   int `json:"assigned"`
+	Skipped    int `json:"skipped"`
+}
